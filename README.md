@@ -1,7 +1,6 @@
 # SQlabs-test
 Solution
 
-
 //note: the search is NOT case sensitive
 
 const fs = require("fs");
@@ -60,88 +59,3 @@ function checkFilesContent(file,extention,directory,param){
         }      
     }
 }
-
-
-           
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//note: the search is NOT case sensitive
-
-// const fs = require("fs");
-// var argumentList = process.argv;
-// var searchParameter = null;
-// var searchExtention = null;
-
-// // as understood, all extentions are aloud for search!
-// if(argumentList[2] === undefined || argumentList[3] === undefined){
-//     console.log("USAGE: node search [EXT] [TEXT]");
-// }else if(argumentList[3] != undefined){
-//     searchExtention = argumentList[2];
-//     searchParameter = argumentList[3];
-//     checkFiles(searchExtention,searchParameter);
-// }
-
-// function checkFiles(ext,param,directory){
-//     console.log("You are searching for: " + param + " in files with extention: " + ext);
-//     //read the directory
-//     var directory =  __dirname;
-//     // console.log(directory);
-//     var dirBuf = Buffer.from(directory);
-//     fs.readdir(dirBuf,function(err,files){
-//         if(err){
-//             console.log(err.message);
-//             return;
-//         }    
-//         //loop all the files            
-//         for(var i = 0; i < files.length; i++){ 
-//          //finding a folder 
-//         if (fs.statSync(files[i]).isDirectory()) {
-//             var inner_directory =  __dirname +"\\"+ files[i];
-//             checkFiles();
-//             continue;
-//         }else{
-//             checkFilesContent(files[i],ext,directory,param);
-//         }
-//       }        
-//     });
-// }
-
-// function checkFilesContent(file,extention,directory,param){
-//     var arryOfMatch = '';
-//     var get_files = file.toLowerCase();
-//     var file_ext = get_files.split(".");
-//     if(file_ext[1] === extention.toLowerCase()){
-//         var stats = fs.lstatSync(directory + "\\" + file);
-//         // console.log(directory + "\\" + files[i]);
-//         var content = fs.readFileSync(directory + "\\" + file, 'utf8');
-//         content = content.toLowerCase();
-//         var lower_case_param = param.toLowerCase();
-//         //check if the file contains the word
-//         if(content.includes(lower_case_param)){
-//             arryOfMatch = directory + "\\" + file + "\r\n" ;
-//             console.log("The file: " + arryOfMatch + " including => " + param );
-//         }      
-//     }
-// }
-
-
-           
